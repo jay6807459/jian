@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@localhost" uuid="0ca76772-3144-44fd-bf09-1f8bbf1b9fb3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>geto</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>192.168.1.34</proxy-host>
+        <proxy-port>22</proxy-port>
+        <user>geto</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>

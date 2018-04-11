@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0094c65f-3e95-45d5-9c37-7d089ca4d49f" name="34开发环境" url="http://192.168.66.34">
+        <fileTransfer host="192.168.66.34" port="22" rootFolder="/work/wwwroot/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

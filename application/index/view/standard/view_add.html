@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标准件新增</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="/static/js/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <form role="form" id="form" onsubmit="return standard_add()">
+                <div class="form-group">
+                    <label for="gt_width">志特宽</label><input type="text" class="form-control" id="gt_width" name="data[gt_width]" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="gt_mark">志特系列</label><input type="text" class="form-control" id="gt_mark" name="data[gt_mark]" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="gt_length">志特长</label><input type="text" class="form-control" id="gt_length" name="data[gt_length]" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="type">系统</label>
+                    <select name="data[type]" class="form-control" id="type">
+                        <option value="1">拉片65系统</option>
+                        <option value="2">拉片63.5系统</option>
+                        <option value="3">螺杆65系统</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">提交</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(function($) {
+        // 你可以在这里继续使用$作为别名...
+    });
+    //新增标准件
+    function standard_add(){
+//        alert(111);return false;
+        $.ajax({
+            type: "POST",
+            url: "/index/standard/add",
+            data: $("#form").serialize(),
+            success: function(data){
+//                return false;
+                console.log(data);
+                if(data.error){
+                    alert(data.msg);
+                }else{
+                    alert(data.msg);
+                    location.href = "/index/standard/lst";
+                }
+                return false;
+            }
+        });
+        return false;
+    }
+</script>
+</body>
+</html>

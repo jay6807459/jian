@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标准件详情</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="/static/js/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="form-group">
+                <label for="gt_sn">序列号</label><input type="text" class="form-control" id="gt_sn" name="data[gt_sn]" value="{$standard_info.gt_sn}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="gt_width">志特宽</label><input type="text" class="form-control" id="gt_width" name="data[gt_width]" value="{$standard_info.gt_width}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="gt_mark">志特系列</label><input type="text" class="form-control" id="gt_mark" name="data[gt_mark]" value="{$standard_info.gt_mark}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="gt_length">志特长</label><input type="text" class="form-control" id="gt_length" name="data[gt_length]" value="{$standard_info.gt_length}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="width">宽</label><input type="text" class="form-control" id="width" name="data[width]" value="{$standard_info.width}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="length">长</label><input type="text" class="form-control" id="length" name="data[length]" value="{$standard_info.length}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="type">系统</label>
+                <select name="data[type]" class="form-control" id="type" disabled>
+                    <option value="1" {$standard_info.type == 1 ? 'selected' : ''}>拉片65系统</option>
+                    <option value="2" {$standard_info.type == 2 ? 'selected' : ''}>拉片63.5系统</option>
+                    <option value="3" {$standard_info.type == 3 ? 'selected' : ''}>螺杆65系统</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="create_time">新增时间</label><input type="text" class="form-control" id="create_time" name="data[create_time]" value="{$standard_info.create_time}" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="update_time">最后更新时间</label><input type="text" class="form-control" id="update_time" name="data[update_time]" value="{$standard_info.update_time}" readonly/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
